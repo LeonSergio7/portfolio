@@ -1,0 +1,67 @@
+<!DOCTYPE html>  
+<html lang="fr">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Calculateur de Prêt Hypothécaire</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            margin: 20px;  
+        }  
+        input, button {  
+            margin: 5px 0;  
+            padding: 10px;  
+            width: 100%;  
+            max-width: 300px;  
+        }  
+        p {  
+            font-size: 20px;  
+            margin-top: 20px;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <h1>Calculateur de Prêt Hypothécaire</h1>  
+    <label for="montantPret">Montant du prêt:</label>  
+    <input type="number" id="montantPret" placeholder="Entrer le montant" required />  
+
+    <label for="tauxInteret">Taux d'intérêt annuel (%):</label>  
+    <input type="number" id="tauxInteret" placeholder="Entrer le taux d'intérêt" required />  
+
+    <label for="dureeAnnees">Durée (années):</label>  
+    <input type="number" id="dureeAnnees" placeholder="Entrer la durée en années" required />  
+
+    <button onclick="calculerPaiement()">Calculer le Paiement Mensuel</button>  
+    
+    <p id="resultat"></p>  
+
+    <script>  
+        function calculerPaiement() {  
+            const montantPret = parseFloat(document.getElementById("montantPret").value);  
+            const tauxInteret = parseFloat(document.getElementById("tauxInteret").value) / 100;  
+            const dureeAnnees = parseInt(document.getElementById("dureeAnnees").value, 10);  
+
+            
+            if (montantPret <= 0) {  
+                alert("Veuillez entrer un montant positif pour le prêt.");  
+                return;  
+            }  
+            if (tauxInteret < 0) {  
+                alert("Veuillez entrer un taux d'intérêt valide.");  
+                return;  
+            }  
+            if (dureeAnnees <= 0) {  
+                alert("Veuillez entrer une durée valide en années.");  
+                return;  
+            }  
+
+            const r = tauxInteret / 12; 
+            const n = dureeAnnees * 12;
+            const M = montantPret * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+
+            document.getElementById("resultat").innerText = "Le paiement mensuel est : " + M.toFixed(2) + "F";  
+        }  
+    </script>  
+</body>  
+</html>

@@ -1,0 +1,207 @@
+:root {  
+    --primary-color: #3498db;  
+    --secondary-color: #2c3e50;  
+    --accent-color: #f39c12;  
+    --background-color: #f4f4f4;  
+    --text-color: #333;  
+    --border-radius: 8px;  
+}  
+
+body {  
+    font-family: 'Arial', sans-serif;  
+    background-color: var(--background-color);  
+    color: var(--text-color);  
+    margin: 0;  
+    padding: 0;  
+}  
+
+header {  
+    background-color: var(--secondary-color);  
+    color: #ffffff;  
+    padding: 20px 0;  
+    text-align: center;  
+}  
+
+nav ul {  
+    list-style: none;  
+    padding: 0;  
+}  
+
+nav ul li {  
+    display: inline;  
+    margin: 0 15px;  
+}  
+
+nav ul li a {  
+    color: #ffffff;  
+    text-decoration: none;  
+    font-weight: bold;  
+    transition: color 0.3s;  
+}  
+
+nav ul li a:hover {  
+    color: var(--accent-color);  
+}  
+
+.section {  
+    padding: 40px 20px;  
+    margin: 20px;  
+    background-color: white;  
+    border-radius: var(--border-radius);  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+}  
+
+.profile-image {  
+    display: block;  
+    margin: 20px auto;  
+    width: 150px;  
+    height: auto;  
+    border-radius: 50%;  
+    border: 2px solid var(--secondary-color);  
+}  
+
+h1, h2, h3 {  
+    color: var(--secondary-color);  
+}  
+
+.competences-container {  
+    display: flex;  
+    flex-direction: column;  
+}  
+
+.competence {  
+    margin-bottom: 20px;  
+}  
+
+.progress-bar {  
+    background-color: #e0e0e0;  
+    border-radius: var(--border-radius);  
+    height: 20px;  
+    width: 100%;  
+}  
+.progress {  
+    background-color: var(--primary-color);  
+    color: white;  
+    text-align: center;  
+    height: 100%;  
+    border-radius: var(--border-radius);  
+}  
+
+.interets-container {  
+    display: flex;  
+    flex-wrap: wrap;  
+    justify-content: space-around;  
+}  
+
+.interet {  
+    width: 300px;  
+    padding: 20px;  
+    margin: 10px;  
+    border: 1px solid #ddd;  
+    border-radius: var(--border-radius);  
+    text-align: center;  
+    background-color: #f9f9f9;  
+    transition: transform 0.2s;  
+}  
+
+.interet:hover {  
+    transform: scale(1.05);  
+}  
+
+.interet i {  
+    font-size: 3em;  
+    margin-bottom: 10px;  
+    color: var(--primary-color);  
+}  
+
+.projects-container {  
+    display: flex;  
+    flex-wrap: wrap;  
+    justify-content: space-around;  
+}  
+
+.project-card {  
+    background-color: #ffffff;  
+    border: 1px solid #ccc;  
+    border-radius: var(--border-radius);  
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  
+    padding: 15px;  
+    margin: 10px;  
+    width: 300px;  
+    text-align: center;  
+    transition: transform 0.2s;  
+}  
+
+.project-card:hover {  
+    transform: scale(1.05);  
+}  
+
+.project-card a {  
+    display: inline-block;  
+    background-color: var(--primary-color);  
+    color: #ffffff;  
+    padding: 10px 15px;  
+    border-radius: var(--border-radius);  
+    text-decoration: none;  
+    transition: background-color 0.3s;  
+}  
+
+.project-card a:hover {  
+    background-color: var(--accent-color);  
+}  
+
+form {  
+    max-width: 400px;  
+    margin: 20px auto;  
+    background-color: #ffffff;  
+    padding: 20px;  
+    border-radius: var(--border-radius);  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+}  
+
+label {  
+    display: block;  
+    margin-top: 10px;  
+    font-weight: bold;  
+}  
+
+input[type="text"],  
+input[type="email"],  
+input[type="tel"],  
+textarea {  
+    width: 100%;  
+    border: 1px solid #ccc;  
+    border-radius: var(--border-radius);  
+    padding: 10px;  
+    margin-top: 5px;  
+}  
+
+textarea:focus,  
+input:focus {  
+    border-color: var(--primary-color);  
+    outline: none;  
+}  
+
+button {  
+    margin-top: 10px;  
+    background-color: var(--secondary-color);  
+    color: #ffffff;  
+    border: none;  
+    padding: 10px;  
+    cursor: pointer;  
+    transition: background-color 0.3s;  
+    border-radius: var(--border-radius);  
+}  
+
+button:hover {  
+    background-color: var(--accent-color);  
+}  
+
+footer {  
+    background-color: var(--secondary-color);  
+    color: #ffffff;  
+    text-align: center;  
+    padding: 15px 0;  
+    position: relative;  
+    margin-top: 20px;  
+}

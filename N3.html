@@ -1,0 +1,37 @@
+<!DOCTYPE html>  
+<html lang="fr">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Devinez un Nombre</title>  
+</head>  
+<body>  
+    <h1>Devinez un nombre secret entre 1 et 100</h1>  
+    <input type="number" id="guess" placeholder="Votre supposition" />  
+    <button onclick="devinerNombre()">Deviner</button>  
+    <p id="resultatDevine"></p>  
+
+    <script>  
+        const nombreSecret = Math.floor(Math.random() * 100) + 1;  
+        let essais = 0;  
+
+        function devinerNombre() {  
+            const guess = parseInt(document.getElementById("guess").value);  
+            essais++;  
+            let message;  
+
+            if (guess < nombreSecret) {  
+                message = "C'est plus grand.";  
+            } else if (guess > nombreSecret) {  
+                message = "C'est plus petit.";  
+            } else {  
+                message = `Bravo! Vous avez deviné le nombre secret ${nombreSecret} en ${essais} essais.`;  
+                // Réinitialiser le jeu  
+                window.location.reload();  
+            }  
+
+            document.getElementById("resultatDevine").innerText = message;  
+        }  
+    </script>  
+</body>  
+</html>
